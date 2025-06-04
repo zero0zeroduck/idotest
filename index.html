@@ -1,3 +1,5 @@
+**HTML (index.html)**
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,180 +7,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Homepage</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: white;
-      overflow-x: hidden;
-    }
-    .background-shapes {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      background: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
-      background-size: 40px 40px;
-      animation: floatShapes 20s linear infinite;
-      z-index: 0;
-    }
-    @keyframes floatShapes {
-      0% { background-position: 0 0; }
-      100% { background-position: 100px 100px; }
-    }
-    .glass-button {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 10px;
-      padding: 10px 20px;
-      color: white;
-      backdrop-filter: blur(10px);
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .glass-button:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-    .site-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      z-index: 10;
-      position: relative;
-    }
-    .logo-group img {
-      height: 50px;
-      margin-right: 10px;
-    }
-    .navigation ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    .navigation a {
-      color: white;
-      text-decoration: none;
-    }
-    .hero-slider {
-      position: relative;
-      width: 100%;
-      height: 80vh;
-      overflow: hidden;
-    }
-    .slide-track {
-      display: flex;
-      animation: slide 25s infinite linear;
-      width: 500%;
-    }
-    @keyframes slide {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-80%); }
-    }
-    .slide {
-      min-width: 100vw;
-      height: 80vh;
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .slide-title {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-    }
-    .slide-text {
-      font-size: 1.2em;
-      margin-bottom: 1em;
-    }
-    .leaderboard-section {
-      display: flex;
-      padding: 40px;
-      justify-content: space-between;
-    }
-    .leaderboard-marquee {
-      width: 60%;
-    }
-    .entry {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-    .profile-pic {
-      border-radius: 50%;
-      height: 40px;
-    }
-    .leaderboard-image img {
-      height: 200px;
-    }
-    .testimonial-section {
-      padding: 40px;
-    }
-    .testimonial-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .testimonial-box {
-      background: rgba(255,255,255,0.05);
-      border-radius: 12px;
-      padding: 20px;
-      display: flex;
-      align-items: flex-start;
-      gap: 15px;
-    }
-    .testimonial-pic {
-      border-radius: 50%;
-      height: 50px;
-    }
-    .video-carousel {
-      padding: 40px;
-    }
-    .carousel {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 20px;
-    }
-    .carousel iframe {
-      flex-shrink: 0;
-      width: 300px;
-      height: 200px;
-      border: none;
-      scroll-snap-align: start;
-    }
-    .logo-showcase {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      padding: 40px;
-    }
-    .popup-logo {
-      width: 100px;
-      animation: popUp 5s infinite;
-    }
-    @keyframes popUp {
-      0%, 95%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.2); opacity: 1; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="background-shapes"></div>
-  <!-- HEADER, SLIDER, LEADERBOARD, TESTIMONIAL, VIDEO, LOGOS as defined before -->
-  <script>
-    // Optional: Add animations or interactions here
-  </script>
+  <header class="site-header">
+    <div class="logo-group">
+      <img src="logo1.png" alt="Logo 1" class="logo" />
+      <img src="logo2.png" alt="Logo 2" class="logo" />
+      <img src="logo3.png" alt="Logo 3" class="logo" />
+    </div>
+    <nav class="navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="signin.html" class="glass-button login-button">Login</a>
+  </header>
+
+  <section class="hero-slider">
+    <div class="slide-track">
+      <div class="slide" style="background-image: url('hero1.jpg');">
+        <h1 class="slide-title">Win Big</h1>
+        <p class="slide-text">Play and win between $10K to $1 million.</p>
+        <button class="glass-button">Join Now</button>
+      </div>
+      <div class="slide" style="background-image: url('hero2.jpg');">
+        <h1 class="slide-title">Play Smart</h1>
+        <p class="slide-text">Boost your chances with every round.</p>
+        <button class="glass-button">Learn More</button>
+      </div>
+      <div class="slide" style="background-image: url('hero3.jpg');">
+        <h1 class="slide-title">Real Winners</h1>
+        <p class="slide-text">See our leaderboard in action.</p>
+        <button class="glass-button">Check Now</button>
+      </div>
+      <div class="slide" style="background-image: url('hero4.jpg');">
+        <h1 class="slide-title">Fast & Fair</h1>
+        <p class="slide-text">Transparency at every level.</p>
+        <button class="glass-button">Explore</button>
+      </div>
+      <div class="slide" style="background-image: url('hero5.jpg');">
+        <h1 class="slide-title">Join The Game</h1>
+        <p class="slide-text">Sign up today and start playing.</p>
+        <button class="glass-button">Sign Up</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="leaderboard-section">
+    <div class="leaderboard">
+      <div class="entry"><img src="user1.jpg" class="profile-pic" /><span class="name">Jordan</span><span class="amount">$100,000</span></div>
+      <div class="entry"><img src="user2.jpg" class="profile-pic" /><span class="name">Sasha</span><span class="amount">$95,000</span></div>
+      <div class="entry"><img src="user3.jpg" class="profile-pic" /><span class="name">Leo</span><span class="amount">$92,500</span></div>
+      <div class="entry"><img src="user4.jpg" class="profile-pic" /><span class="name">Ava</span><span class="amount">$89,000</span></div>
+      <div class="entry"><img src="user5.jpg" class="profile-pic" /><span class="name">Noah</span><span class="amount">$85,000</span></div>
+      <div class="entry"><img src="user6.jpg" class="profile-pic" /><span class="name">Mia</span><span class="amount">$80,000</span></div>
+      <div class="entry"><img src="user7.jpg" class="profile-pic" /><span class="name">Liam</span><span class="amount">$75,000</span></div>
+      <div class="entry"><img src="user8.jpg" class="profile-pic" /><span class="name">Ella</span><span class="amount">$72,000</span></div>
+      <div class="entry"><img src="user9.jpg" class="profile-pic" /><span class="name">Zoe</span><span class="amount">$70,000</span></div>
+      <div class="entry"><img src="user10.jpg" class="profile-pic" /><span class="name">Jack</span><span class="amount">$68,000</span></div>
+    </div>
+    <div class="leaderboard-image">
+      <img src="trophy.png" alt="Trophy" />
+    </div>
+  </section>
+
+  <section class="testimonial-section">
+    <div class="testimonial-grid">
+      <div class="testimonial-box">
+        <img src="rachel.jpg" class="testimonial-pic" />
+        <div class="testimonial-info">
+          <h4>Rachel</h4>
+          <div class="stars">★★★★☆</div>
+          <p>This platform changed my life!</p>
+        </div>
+      </div>
+      <div class="testimonial-box">
+        <img src="david.jpg" class="testimonial-pic" />
+        <div class="testimonial-info">
+          <h4>David</h4>
+          <div class="stars">★★★★★</div>
+          <p>Most exciting experience I’ve ever had!</p>
+        </div>
+      </div>
+      <div class="testimonial-box">
+        <img src="olivia.jpg" class="testimonial-pic" />
+        <div class="testimonial-info">
+          <h4>Olivia</h4>
+          <div class="stars">★★★★☆</div>
+          <p>I’m coming back every week. So much fun!</p>
+        </div>
+      </div>
+      <div class="testimonial-box">
+        <img src="tyler.jpg" class="testimonial-pic" />
+        <div class="testimonial-info">
+          <h4>Tyler</h4>
+          <div class="stars">★★★☆☆</div>
+          <p>Good prizes, but could be faster.</p>
+        </div>
+      </div>
+      <div class="testimonial-box">
+        <img src="emma.jpg" class="testimonial-pic" />
+        <div class="testimonial-info">
+          <h4>Emma</h4>
+          <div class="stars">★★★★★</div>
+          <p>Best way to earn while playing!</p>
+        </div>
+      </div>
+      <div class="testimonial-box">
+        <img src="james.jpg" class="testimonial-pic" />
+        <div class="testimonial-info">
+          <h4>James</h4>
+          <div class="stars">★★★★☆</div>
+          <p>Can’t believe how much I’ve won!</p>
+        </div>
+      </div>
+      <div class="testimonial-box">
+        <img src="mia.jpg" class="testimonial-pic" />
+        <div class="testimonial-info">
+          <h4>Mia</h4>
+          <div class="stars">★★★★★</div>
+          <p>I told all my friends to try it!</p>
+        </div>
+      </div>
+      <div class="testimonial-box">
+        <img src="lucas.jpg" class="testimonial-pic" />
+        <div class="testimonial-info">
+          <h4>Lucas</h4>
+          <div class="stars">★★★★☆</div>
+          <p>Really well made platform. Respect!</p>
+        </div>
+      </div>
+      <div class="testimonial-box">
+        <img src="grace.jpg" class="testimonial-pic" />
+        <div class="testimonial-info">
+          <h4>Grace</h4>
+          <div class="stars">★★★★★</div>
+          <p>I had doubts, but I’m blown away.</p>
+        </div>
+      </div>
+      <div class="testimonial-box">
+        <img src="ben.jpg" class="testimonial-pic" />
+        <div class="testimonial-info">
+          <h4>Ben</h4>
+          <div class="stars">★★★☆☆</div>
+          <p>Great potential. Needs more games.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-carousel">
+    <div class="carousel">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID4" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID5" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="logo-showcase">
+    <img src="logo1.png" class="popup-logo" />
+    <img src="logo2.png" class="popup-logo" />
+    <img src="logo3.png" class="popup-logo" />
+    <img src="logo4.png" class="popup-logo" />
+    <img src="logo5.png" class="popup-logo" />
+    <img src="logo6.png" class="popup-logo" />
+  </section>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
+```
