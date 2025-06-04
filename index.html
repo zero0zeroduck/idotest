@@ -27,19 +27,48 @@
   </header>
 
   <section class="hero-slider">
-    <div class="slide active">
-      <h1>Win Big</h1>
-      <p>Play and win between $10K to $1 million.</p>
-      <button class="glass-button">Join Now</button>
+    <div class="slide-track">
+      <div class="slide" style="background-image: url('hero1.jpg');">
+        <h1 class="slide-title">Win Big</h1>
+        <p class="slide-text">Play and win between $10K to $1 million.</p>
+        <button class="glass-button">Join Now</button>
+      </div>
+      <div class="slide" style="background-image: url('hero2.jpg');">
+        <h1 class="slide-title">Play Smart</h1>
+        <p class="slide-text">Boost your chances with every round.</p>
+        <button class="glass-button">Learn More</button>
+      </div>
+      <div class="slide" style="background-image: url('hero3.jpg');">
+        <h1 class="slide-title">Real Winners</h1>
+        <p class="slide-text">See our leaderboard in action.</p>
+        <button class="glass-button">Check Now</button>
+      </div>
+      <div class="slide" style="background-image: url('hero4.jpg');">
+        <h1 class="slide-title">Fast & Fair</h1>
+        <p class="slide-text">Transparency at every level.</p>
+        <button class="glass-button">Explore</button>
+      </div>
+      <div class="slide" style="background-image: url('hero5.jpg');">
+        <h1 class="slide-title">Join The Game</h1>
+        <p class="slide-text">Sign up today and start playing.</p>
+        <button class="glass-button">Sign Up</button>
+      </div>
     </div>
   </section>
 
   <section class="leaderboard-section">
-    <div class="leaderboard">
-      <div class="entry">
-        <img src="user1.jpg" class="profile-pic" />
-        <span class="name">Jordan</span>
-        <span class="amount">$100,000</span>
+    <div class="leaderboard-marquee">
+      <div class="marquee-track">
+        <div class="entry"><img src="user1.jpg" class="profile-pic" /><span class="name">Jordan</span><span class="amount">$100,000</span></div>
+        <div class="entry"><img src="user2.jpg" class="profile-pic" /><span class="name">Sasha</span><span class="amount">$95,000</span></div>
+        <div class="entry"><img src="user3.jpg" class="profile-pic" /><span class="name">Leo</span><span class="amount">$92,500</span></div>
+        <div class="entry"><img src="user4.jpg" class="profile-pic" /><span class="name">Ava</span><span class="amount">$89,000</span></div>
+        <div class="entry"><img src="user5.jpg" class="profile-pic" /><span class="name">Noah</span><span class="amount">$85,000</span></div>
+        <div class="entry"><img src="user6.jpg" class="profile-pic" /><span class="name">Mia</span><span class="amount">$80,000</span></div>
+        <div class="entry"><img src="user7.jpg" class="profile-pic" /><span class="name">Liam</span><span class="amount">$75,000</span></div>
+        <div class="entry"><img src="user8.jpg" class="profile-pic" /><span class="name">Ella</span><span class="amount">$72,000</span></div>
+        <div class="entry"><img src="user9.jpg" class="profile-pic" /><span class="name">Zoe</span><span class="amount">$70,000</span></div>
+        <div class="entry"><img src="user10.jpg" class="profile-pic" /><span class="name">Jack</span><span class="amount">$68,000</span></div>
       </div>
     </div>
     <div class="leaderboard-image">
@@ -50,11 +79,27 @@
   <section class="testimonial-section">
     <div class="testimonial-grid">
       <div class="testimonial-box">
-        <img src="person1.jpg" class="testimonial-pic" />
+        <img src="rachel.jpg" class="testimonial-pic" />
         <div class="testimonial-info">
           <h4>Rachel</h4>
           <div class="stars">★★★★☆</div>
-          <p>This platform changed my life! I love the thrill.</p>
+          <p>This platform changed my life!</p>
+        </div>
+      </div>
+      <div class="testimonial-box">
+        <img src="chris.jpg" class="testimonial-pic" />
+        <div class="testimonial-info">
+          <h4>Chris</h4>
+          <div class="stars">★★★★★</div>
+          <p>Easy to use and very rewarding.</p>
+        </div>
+      </div>
+      <div class="testimonial-box">
+        <img src="tina.jpg" class="testimonial-pic" />
+        <div class="testimonial-info">
+          <h4>Tina</h4>
+          <div class="stars">★★★★★</div>
+          <p>Absolutely amazing experience.</p>
         </div>
       </div>
     </div>
@@ -62,167 +107,23 @@
 
   <section class="video-carousel">
     <div class="carousel">
-      <iframe src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID4" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID5" allowfullscreen></iframe>
     </div>
   </section>
 
   <section class="logo-showcase">
     <img src="logo1.png" class="popup-logo" />
     <img src="logo2.png" class="popup-logo" />
+    <img src="logo3.png" class="popup-logo" />
+    <img src="logo4.png" class="popup-logo" />
+    <img src="logo5.png" class="popup-logo" />
+    <img src="logo6.png" class="popup-logo" />
   </section>
 
   <script src="scripts.js"></script>
 </body>
 </html>
-
-<!-- styles.css -->
-<style>
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #000;
-  color: #fff;
-  overflow-x: hidden;
-}
-.background-shapes {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: url('abstract-shapes.png') repeat;
-  opacity: 0.05;
-  animation: floatShapes 30s linear infinite;
-  z-index: -1;
-}
-@keyframes floatShapes {
-  0% { background-position: 0 0; }
-  100% { background-position: 1000px 0; }
-}
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  position: relative;
-}
-.logo-group .logo {
-  width: 40px;
-  margin-right: 10px;
-}
-.navigation ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
-.navigation a {
-  color: white;
-  text-decoration: none;
-}
-.login-button {
-  position: absolute;
-  right: 2rem;
-}
-.glass-button {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 10px 20px;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.glass-button:hover {
-  box-shadow: 0 0 10px #00acd1;
-}
-.hero-slider {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: url('hero1.jpg') center/cover no-repeat;
-}
-.leaderboard-section {
-  display: flex;
-  padding: 2rem;
-  justify-content: space-around;
-}
-.leaderboard .entry {
-  display: flex;
-  align-items: center;
-  background: #111;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-}
-.profile-pic {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-.testimonial-section .testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 2rem;
-}
-.testimonial-box {
-  background: #111;
-  padding: 1rem;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.testimonial-pic {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-.video-carousel .carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: 1rem;
-  padding: 2rem;
-}
-.video-carousel iframe {
-  width: 300px;
-  height: 200px;
-  flex-shrink: 0;
-  border-radius: 10px;
-}
-.logo-showcase {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 2rem;
-  justify-content: center;
-}
-.popup-logo {
-  width: 60px;
-  animation: pop 5s infinite;
-}
-@keyframes pop {
-  0%, 90% { transform: scale(1); opacity: 0.5; }
-  95% { transform: scale(1.2); opacity: 1; }
-  100% { transform: scale(1); }
-}
-</style>
-
-<!-- scripts.js -->
-<script>
-// Optional: Auto slider or animations
-let slideIndex = 0;
-setInterval(() => {
-  const slides = document.querySelectorAll('.hero-slider .slide');
-  slides.forEach(slide => slide.classList.remove('active'));
-  slideIndex = (slideIndex + 1) % slides.length;
-  slides[slideIndex].classList.add('active');
-}, 5000);
-</script>
