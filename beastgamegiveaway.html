@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-shapes"></div>
+
+  <header class="site-header">
+    <div class="logo-group">
+      <img src="logo1.png" alt="Logo 1" class="logo" />
+      <img src="logo2.png" alt="Logo 2" class="logo" />
+      <img src="logo3.png" alt="Logo 3" class="logo" />
+    </div>
+    <nav class="navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="signin.html" class="glass-button login-button">Login</a>
+  </header>
+
+  <section class="hero-slider">
+    <div class="slide active">
+      <h1>Win Big</h1>
+      <p>Play and win between $10K to $1 million.</p>
+      <button class="glass-button">Join Now</button>
+    </div>
+  </section>
+
+  <section class="leaderboard-section">
+    <div class="leaderboard">
+      <div class="entry">
+        <img src="user1.jpg" class="profile-pic" />
+        <span class="name">Jordan</span>
+        <span class="amount">$100,000</span>
+      </div>
+    </div>
+    <div class="leaderboard-image">
+      <img src="trophy.png" alt="Trophy" />
+    </div>
+  </section>
+
+  <section class="testimonial-section">
+    <div class="testimonial-grid">
+      <div class="testimonial-box">
+        <img src="person1.jpg" class="testimonial-pic" />
+        <div class="testimonial-info">
+          <h4>Rachel</h4>
+          <div class="stars">★★★★☆</div>
+          <p>This platform changed my life! I love the thrill.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-carousel">
+    <div class="carousel">
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="logo-showcase">
+    <img src="logo1.png" class="popup-logo" />
+    <img src="logo2.png" class="popup-logo" />
+  </section>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+<!-- styles.css -->
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+.background-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('abstract-shapes.png') repeat;
+  opacity: 0.05;
+  animation: floatShapes 30s linear infinite;
+  z-index: -1;
+}
+@keyframes floatShapes {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 0; }
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+}
+.logo-group .logo {
+  width: 40px;
+  margin-right: 10px;
+}
+.navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.navigation a {
+  color: white;
+  text-decoration: none;
+}
+.login-button {
+  position: absolute;
+  right: 2rem;
+}
+.glass-button {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.glass-button:hover {
+  box-shadow: 0 0 10px #00acd1;
+}
+.hero-slider {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url('hero1.jpg') center/cover no-repeat;
+}
+.leaderboard-section {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-around;
+}
+.leaderboard .entry {
+  display: flex;
+  align-items: center;
+  background: #111;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.testimonial-section .testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+.testimonial-box {
+  background: #111;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.testimonial-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.video-carousel .carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 2rem;
+}
+.video-carousel iframe {
+  width: 300px;
+  height: 200px;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+.logo-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+}
+.popup-logo {
+  width: 60px;
+  animation: pop 5s infinite;
+}
+@keyframes pop {
+  0%, 90% { transform: scale(1); opacity: 0.5; }
+  95% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+</style>
+
+<!-- scripts.js -->
+<script>
+// Optional: Auto slider or animations
+let slideIndex = 0;
+setInterval(() => {
+  const slides = document.querySelectorAll('.hero-slider .slide');
+  slides.forEach(slide => slide.classList.remove('active'));
+  slideIndex = (slideIndex + 1) % slides.length;
+  slides[slideIndex].classList.add('active');
+}, 5000);
+</script>
