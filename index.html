@@ -3,74 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Homepage</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Beast Game - Home</title>
+  <link rel="stylesheet" href="style-home.css" />
 </head>
 <body>
-  <div class="background-shapes"></div>
-  <header class="site-header">
-    <div class="logo-group">
-      <img src="logo1.png" alt="Logo 1" class="logo" />
-      <img src="logo2.png" alt="Logo 2" class="logo" />
-      <img src="logo3.png" alt="Logo 3" class="logo" />
+  <header>
+    <div class="logo-container">
+      <img src="media/images/logo1.png" alt="Logo 1">
+      <img src="media/images/logo2.png" alt="Logo 2">
+      <img src="media/images/logo3.png" alt="Logo 3">
     </div>
-    <nav class="navigation">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="signin.html">Sign In</a>
     </nav>
-    <a href="signin.html" class="glass-button login-button">Login</a>
   </header>
 
-  <section class="hero-video">
-    <video autoplay muted loop playsinline class="hero-background-video">
-      <source src="hero-video.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-content">
-      <h1 class="slide-title">Win Big</h1>
-      <p class="slide-text">Play and win between $10K to $1 million.</p>
-      <button class="glass-button">Join Now</button>
-    </div>
-  </section>
+  <main>
+    <section class="hero">
+      <h1>Welcome to the Beast Game!</h1>
+      <button onclick="location.href='signin.html'">Sign In to Play</button>
+    </section>
 
-  <section class="leaderboard-section">
-    <div class="leaderboard">
-      <div class="entry"><img src="user1.jpg" class="profile-pic" /><span class="name">Jordan</span><span class="amount">$100,000</span></div>
-      <div class="entry"><img src="user2.jpg" class="profile-pic" /><span class="name">Sasha</span><span class="amount">$95,000</span></div>
-      <div class="entry"><img src="user3.jpg" class="profile-pic" /><span class="name">Leo</span><span class="amount">$92,500</span></div>
-      <div class="entry"><img src="user4.jpg" class="profile-pic" /><span class="name">Ava</span><span class="amount">$89,000</span></div>
-      <div class="entry"><img src="user5.jpg" class="profile-pic" /><span class="name">Noah</span><span class="amount">$85,000</span></div>
-      <div class="entry"><img src="user6.jpg" class="profile-pic" /><span class="name">Mia</span><span class="amount">$80,000</span></div>
-      <div class="entry"><img src="user7.jpg" class="profile-pic" /><span class="name">Liam</span><span class="amount">$75,000</span></div>
-      <div class="entry"><img src="user8.jpg" class="profile-pic" /><span class="name">Ella</span><span class="amount">$72,000</span></div>
-      <div class="entry"><img src="user9.jpg" class="profile-pic" /><span class="name">Zoe</span><span class="amount">$70,000</span></div>
-      <div class="entry"><img src="user10.jpg" class="profile-pic" /><span class="name">Jack</span><span class="amount">$68,000</span></div>
-    </div>
-    <div class="leaderboard-image">
-      <img src="trophy.png" alt="Trophy" />
-    </div>
-  </section>
+    <section class="voting">
+      <h2>Vote for Your Favorite Player</h2>
+      <div id="players-container"></div>
+    </section>
 
-  <section class="testimonial-section">
-    <!-- Testimonials remain unchanged -->
-    ...
-  </section>
+    <section class="testimonials">
+      <h2>What Players Are Saying</h2>
+      <div class="testimonial-scroll" id="testimonial-container"></div>
+    </section>
 
-  <section class="video-carousel">
-    <!-- Video carousel remains unchanged -->
-    ...
-  </section>
+    <section class="videos">
+      <h2>Watch the Beast Games</h2>
+      <div class="video-carousel">
+        <video src="media/videos/clip1.mp4" controls></video>
+        <video src="media/videos/clip2.mp4" controls></video>
+      </div>
+    </section>
+  </main>
 
-  <section class="logo-showcase">
-    <!-- Logos remain unchanged -->
-    ...
-  </section>
+  <footer>
+    <img src="media/images/logo1.png" alt="Logo 1">
+    <img src="media/images/logo2.png" alt="Logo 2">
+    <img src="media/images/logo3.png" alt="Logo 3">
+  </footer>
 
-  <script src="scripts.js"></script>
+  <script src="script-home.js"></script>
 </body>
 </html>
-```
