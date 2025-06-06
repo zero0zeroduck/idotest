@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beast Game - User Account</title>
+  <link rel="stylesheet" href="style-user-account.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="media/images/logo1.png" alt="Logo 1" />
+      <img src="media/images/logo2.png" alt="Logo 2" />
+      <img src="media/images/logo3.png" alt="Logo 3" />
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="signin.html">Sign In</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="account-container">
+      <h1>Welcome, <span id="username-display"></span>!</h1>
+
+      <div class="profile-section">
+        <img src="media/images/profile-placeholder.png" alt="Profile Picture" class="profile-pic" />
+        <div class="stats">
+          <p><strong>Votes:</strong> <span id="votes-count">0</span></p>
+          <p><strong>Money Earned:</strong> $<span id="money-earned">0</span></p>
+        </div>
+      </div>
+
+      <div class="tap-game">
+        <h2>Tap Game</h2>
+        <button id="tap-btn">Tap Me!</button>
+        <p>Each tap adds $1. Max $1,000,000.</p>
+      </div>
+
+      <button id="cashout-btn" class="hidden">Cash Out</button>
+    </section>
+  </main>
+
+  <footer>
+    <img src="media/images/logo1.png" alt="Logo 1" />
+    <img src="media/images/logo2.png" alt="Logo 2" />
+    <img src="media/images/logo3.png" alt="Logo 3" />
+  </footer>
+
+  <script src="script-user-account.js"></script>
+</body>
+</html>
