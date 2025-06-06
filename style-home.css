@@ -29,22 +29,58 @@ nav a {
 }
 
 .hero {
+  position: relative;
   text-align: center;
   padding: 60px 20px;
+  color: white;
+  overflow: hidden;
+  z-index: 1;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.4); /* dark overlay */
+  z-index: -2;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+.hero.fade-out::before {
+  opacity: 0;
+}
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
 }
-
-.hero button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background-color: #da4579;
-  border: none;
-  border-radius: 8px;
+.glass-btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background: rgba(255 255 255 / 0.15);
+  border: 1px solid rgba(255 255 255 / 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
   cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  user-select: none;
+}
+.glass-btn:hover {
+  background: rgba(255 255 255 / 0.3);
+  border-color: rgba(255 255 255 / 0.6);
+}
+#animated-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  min-height: 3rem; /* avoid flicker */
 }
 
 .voting, .testimonials, .videos {
